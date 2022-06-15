@@ -1,0 +1,16 @@
+--
+version: '3.3'
+services:
+  vrising:
+    container_name: vrising
+    image: trueosiris/vrising
+    network_mode: bridge
+    environment:
+      - TZ=${TIMEZONE}
+      - SERVERNAME=${SRVNAME}
+    volumes:
+      - ${SRVBIN}:/mnt/vrising/server:rw'
+      - ${SRVDATA}:/mnt/vrising/persistentdata:rw'
+    ports:
+      - '9876:9876/udp'
+      - '9877:9877/udp'
