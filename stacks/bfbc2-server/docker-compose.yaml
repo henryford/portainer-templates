@@ -1,0 +1,37 @@
+---
+version: "3"
+services:
+  master-server:
+    image: quay.io/docker-gameserver/bfbc2-master-server
+    restart: always
+    network_mode: "host"
+    tty: true
+    volumes:
+      - ${BC2DB}:/home/bfbc2/database
+      - ${BC2INI}:/home/bfbc2/config.ini
+
+  srv1:
+    image: quay.io/docker-gameserver/bfbc2-server
+    restart: always
+    network_mode: "host"
+    environment:
+      MASTER_SERVER: "127.0.0.1"
+      SERVER_TYPE: ${SRV1TYPE}
+      SERVER_NAME: ${SRV1NAME}
+      SERVER_PORT: 19567
+      SERVER_ADMIN_PORT: 48888
+      SERVER_ADMIN_PASSWORD: ${SRV1ADMINPASS}
+      SERVER_MAX_PLAYERS: ${SRV1MAXP}
+
+  srv2:
+    image: quay.io/docker-gameserver/bfbc2-server
+    restart: always
+    network_mode: "host"
+    environment:
+      MASTER_SERVER: "127.0.0.1"
+      SERVER_TYPE: ${SRV2TYPE}
+      SERVER_NAME: ${SRV2NAME}
+      SERVER_PORT: 19568
+      SERVER_ADMIN_PORT: 48889
+      SERVER_ADMIN_PASSWORD: ${SRV2ADMINPASS}
+      SERVER_MAX_PLAYERS: ${SRV2MAXP}
