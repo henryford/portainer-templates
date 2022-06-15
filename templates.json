@@ -247,6 +247,65 @@
           "default": "Europe/Berlin"
         }
       ]
+    },
+    {
+      "type": 3,
+      "title": "Code-Server",
+      "description": "Provide MS Visual Studio Code in a browser",
+      "categories": ["util","admin","code","dev"],
+      "platform": "linux",
+      "logo": "https://styles.redditmedia.com/t5_48zfnu/styles/communityIcon_n86l9me2pjv61.png?width=256&s=cbb5bb2c022cdd4ee1c8e010cf2a60296dd22a3e",
+      "repository": {
+        "url": "https://github.com/henryford/portainer-templates.git",
+        "stackfile": "stacks/code-server/docker-compose.yaml"
+      },
+      "env": [
+        {
+          "name": "CSPASS",
+          "label": "CodeServer Access Password",
+          "description": "Password for Codeserver",
+          "default": "password"
+        },
+        {
+          "name": "CSHASHPASS",
+          "label": "CodeServer Access Password - Hashed",
+          "description": "Password for Codeserver - Hashed (create with echo -n 'thisismypassword' | npx argon2-cli -e)",
+          "default": ""
+        },
+        {
+          "name": "CSSUPASS",
+          "label": "Password for sudo",
+          "description": "Password for sudo",
+          "default": "password"
+        },
+        {
+          "name": "CSSUPASSHASH",
+          "label": "Password for sudo - Hashed",
+          "description": "Password for sudo - Hashed"
+        },
+        {
+          "name": "CSPROXDOM",
+          "label": "Proxy Domain",
+          "description": "The domain you're proxying code-server through",
+          "default": ""
+        },
+        {
+          "name": "CSCONF",
+          "label": "Config Directory",
+          "description": "You can use a local directory, otherwise a named volume csconf will be used",
+          "default": "csconf"
+        },
+        {
+          "name": "CSPORT",
+          "label": "Port code-server will be exposed on",
+          "default": "8080"
+        },
+        {
+          "name": "TIMEZONE",
+          "label": "Timezone for the container",
+          "default": "Europe/Berlin"
+        }
+      ]
     }
   ]
 }

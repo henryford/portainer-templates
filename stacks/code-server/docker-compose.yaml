@@ -1,0 +1,21 @@
+---
+version: "2.1"
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    environment:
+      - TZ=${TIMEZONE}
+      - PASSWORD=${CSPASS}
+      - HASHED_PASSWORD=${CSHASHPASS}
+      - SUDO_PASSWORD=${CSSUPASS}
+      - SUDO_PASSWORD_HASH=${CSSUHASHPASS}
+      - PROXY_DOMAIN=${CSPROXDOM}
+      - DEFAULT_WORKSPACE=${CSDEFWS}
+    volumes:
+      - ${CSCONF}:/config
+    ports:
+      - 8443:8443
+    restart: unless-stopped
+volumes:
+  csconf:
