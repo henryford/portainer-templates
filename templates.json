@@ -218,7 +218,10 @@
       "categories": ["dedi","game"],
       "platform": "linux",
       "logo": "https://styles.redditmedia.com/t5_48zfnu/styles/communityIcon_n86l9me2pjv61.png?width=256&s=cbb5bb2c022cdd4ee1c8e010cf2a60296dd22a3e",
-      "stackfile": "stacks/vrising-server/docker-compose.yaml",
+      "repository": {
+        "url": "https://github.com/henryford/portainer-templates.git",
+        "stackfile": "stacks/vrising-server/docker-compose.yaml"
+      },
       "env": [
         {
           "name": "SRVNAME",
