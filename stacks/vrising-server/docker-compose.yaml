@@ -9,8 +9,8 @@ services:
       - TZ=${TIMEZONE}
       - SERVERNAME=${SRVNAME}
     volumes:
-      - ${SRVBIN}:/mnt/vrising/server'
-      - ${SRVDATA}:/mnt/vrising/persistentdata'
+      - ${SRVBIN}:/mnt/vrising/server
+      - ${SRVDATA}:/mnt/vrising/persistentdata
     ports:
       - '9876:9876/udp'
       - '9877:9877/udp'
