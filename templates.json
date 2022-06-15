@@ -252,9 +252,9 @@
       "type": 3,
       "title": "Code-Server",
       "description": "Provide MS Visual Studio Code in a browser",
-      "categories": ["util","admin","code","dev"],
+      "categories": ["dev","util"],
       "platform": "linux",
-      "logo": "https://styles.redditmedia.com/t5_48zfnu/styles/communityIcon_n86l9me2pjv61.png?width=256&s=cbb5bb2c022cdd4ee1c8e010cf2a60296dd22a3e",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
       "repository": {
         "url": "https://github.com/henryford/portainer-templates.git",
         "stackfile": "stacks/code-server/docker-compose.yaml"
