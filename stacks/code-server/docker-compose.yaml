@@ -11,11 +11,10 @@ services:
       - SUDO_PASSWORD=${CSSUPASS}
       - SUDO_PASSWORD_HASH=${CSSUHASHPASS}
       - PROXY_DOMAIN=${CSPROXDOM}
-      - DEFAULT_WORKSPACE=${CSDEFWS}
     volumes:
       - ${CSCONF}:/config
     ports:
-      - 8443:8443
+      - ${CSPORT}:8443
     restart: unless-stopped
 volumes:
   csconf:
