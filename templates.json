@@ -325,7 +325,7 @@
           "default": "8000"
         },
         {
-          "name": "TAUSER",
+          "name": "TAUSR",
           "label": "Initial User of the instance.",
           "default": "admin"
         },
@@ -350,6 +350,12 @@
           "label": "Volume to store your media files.",
           "description": "Will mount a host directory if a full path is given.",
           "default": "media"
+        },
+        {
+          "name": "TAESDATA",
+          "label": "Volume for storing the Elastic Search data",
+          "description": "Will mount a host directory if a full path is given.",
+          "default": "es"
         }
       ]
     }

@@ -46,7 +46,7 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - es:${ESDATA}    # check for permission error when using bind mount, see readme
+      - es:${TAESDATA}    # check for permission error when using bind mount, see readme
     expose:
       - "9200"
 
