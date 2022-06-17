@@ -304,52 +304,52 @@
           "name": "TIMEZONE",
           "label": "Timezone for the container",
           "default": "Europe/Berlin"
+        }
+      ]
+    },
+    {
+      "type": 3,
+      "title": "tubeArchivist",
+      "description": "Archive youTube!",
+      "categories": ["media","video"],
+      "platform": "linux",
+      "logo": "https://github.com/tubearchivist/tubearchivist/blob/master/assets/tube-archivist-logo-dark.png?raw=true",
+      "repository": {
+        "url": "https://github.com/henryford/portainer-templates.git",
+        "stackfile": "stacks/tubearchivist/docker-compose.yaml"
+      },
+      "env": [
+        {
+          "name": "TAPORT",
+          "label": "Hostport",
+          "default": "8000"
         },
         {
-          "type": 3,
-          "title": "tubeArchivist",
-          "description": "Archive youTube!",
-          "categories": ["media","video"],
-          "platform": "linux",
-          "logo": "https://github.com/tubearchivist/tubearchivist/blob/master/assets/tube-archivist-logo-dark.png?raw=true",
-          "repository": {
-            "url": "https://github.com/henryford/portainer-templates.git",
-            "stackfile": "stacks/tubearchivist/docker-compose.yaml"
-          },
-          "env": [
-            {
-              "name": "TAPORT",
-              "label": "Hostport",
-              "default": "8000"
-            },
-            {
-              "name": "TAUSER",
-              "label": "Initial User of the instance.",
-              "default": "admin"
-            },
-            {
-              "name": "TAPASS",
-              "label": "Password for the initial user.",
-              "default": "tubearchivist"
-            },
+          "name": "TAUSER",
+          "label": "Initial User of the instance.",
+          "default": "admin"
+        },
+        {
+          "name": "TAPASS",
+          "label": "Password for the initial user.",
+          "default": "tubearchivist"
+        },
 
-            {
-              "name": "TAESPASS",
-              "label": "Elastic Search password",
-              "default": "tubearchivist"
-            },
-            {
-              "name": "TATZ",
-              "label": "Timezone of your container",
-              "default": "Europe/Berlin"
-            },
-            {
-              "name": "TAMEDIADIR",
-              "label": "Volume to store your media files.",
-              "description": "Will mount a host directory if a full path is given.",
-              "default": "media"
-            }
-          ]
+        {
+          "name": "TAESPASS",
+          "label": "Elastic Search password",
+          "default": "tubearchivist"
+        },
+        {
+          "name": "TATZ",
+          "label": "Timezone of your container",
+          "default": "Europe/Berlin"
+        },
+        {
+          "name": "TAMEDIADIR",
+          "label": "Volume to store your media files.",
+          "description": "Will mount a host directory if a full path is given.",
+          "default": "media"
         }
       ]
     }
