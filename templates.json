@@ -362,7 +362,7 @@
     {
       "type": 3,
       "title": "arrServers",
-      "description": "Serve all your arr needs. Include sonarr, radarr, lidarr, prowlarr and sabnzbd.",
+      "description": "Serve all your arr needs. Includes sonarr, radarr, lidarr, prowlarr and sabnzbd.",
       "categories": ["media","video","dl","audio","book"],
       "platform": "linux",
       "logo": "https://github.com/Sonarr/Sonarr/raw/develop/Logo/128.png",
