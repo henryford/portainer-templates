@@ -9,7 +9,7 @@ services:
     volumes:
       - ${SABCONF}:/config
     ports:
-      - 9095:8080
+      - ${SABPORT}:8080
     restart: unless-stopped
   radarr:
     image: lscr.io/linuxserver/radarr:nightly
@@ -19,7 +19,7 @@ services:
     volumes:
       - ${RADCONF}:/config
     ports:
-      - 7878:7878
+      - ${RADPORT}:7878
     restart: unless-stopped
   sonarr:
     image: lscr.io/linuxserver/sonarr:latest
@@ -29,7 +29,7 @@ services:
     volumes:
       - ${SONCONF}:/config
     ports:
-      - 8989:8989
+      - ${SONPORT}:8989
     restart: unless-stopped
   lidarr:
     image: lscr.io/linuxserver/lidarr:latest
@@ -39,7 +39,7 @@ services:
     volumes:
       - ${LIDCONF}:/config
     ports:
-      - 8686:8686
+      - ${LIDPORT}:8686
     restart: unless-stopped
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:develop
@@ -49,5 +49,10 @@ services:
     volumes:
       - ${PROCONF}:/config
     ports:
-      - 9696:9696
+      - ${PROPORT}:9696
     restart: unless-stopped
+volumes:
+  radarr:
+  sonarr:
+  sab:
+  prowlarr:

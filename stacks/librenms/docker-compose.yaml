@@ -58,8 +58,6 @@ services:
       - msmtpd
     volumes:
       - "./librenms:/data"
-    env_file:
-      - "./librenms.env"
     environment:
       - "TZ=${TZ}"
       - "PUID=${PUID}"
@@ -90,8 +88,6 @@ services:
       - "./librenms.env"
     environment:
       - "TZ=${TZ}"
-      - "PUID=${PUID}"
-      - "PGID=${PGID}"
       - "DB_HOST=db"
       - "DB_NAME=${MYSQL_DATABASE}"
       - "DB_USER=${MYSQL_USER}"
@@ -122,8 +118,6 @@ services:
         protocol: udp
     volumes:
       - "./librenms:/data"
-    env_file:
-      - "./librenms.env"
     environment:
       - "TZ=${TZ}"
       - "PUID=${PUID}"
@@ -157,12 +151,8 @@ services:
         protocol: udp
     volumes:
       - "./librenms:/data"
-    env_file:
-      - "./librenms.env"
     environment:
       - "TZ=${TZ}"
-      - "PUID=${PUID}"
-      - "PGID=${PGID}"
       - "DB_HOST=db"
       - "DB_NAME=${MYSQL_DATABASE}"
       - "DB_USER=${MYSQL_USER}"

@@ -4,9 +4,9 @@ services:
         image: kizaing/kavita:latest
         container_name: kavita
         volumes:
-            - ${KAVITACONF}:/kavita/config
+            - ${KAVCONF}:/kavita/config
         ports:
-            - ${KAVITAPORT}:5000
+            - ${KAVPORT}:5000
         restart: unless-stopped
 volumes:
-  kavitaconf:
+  kavaconf:
