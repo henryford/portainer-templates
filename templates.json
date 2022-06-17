@@ -448,7 +448,7 @@
       "description": "Deploy WatchTower to automate docker container updates.",
       "categories": ["aut","admin","docker"],
       "platform": "linux",
-      "logo": "https://raw.githubusercontent.com/Kareadita/Kavita/develop/Logo/kavita.svg",
+      "logo": "https://github.com/containrrr/watchtower/raw/main/gopher-watchtower.png",
       "repository": {
         "url": "https://github.com/henryford/portainer-templates.git",
         "stackfile": "stacks/watchtower/docker-compose.yaml"
