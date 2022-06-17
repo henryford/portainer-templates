@@ -17,7 +17,7 @@ services:
       - HOST_GID=1000
       - TA_USERNAME=${TAUSR}     # your initial TA credentials
       - TA_PASSWORD=${TAPASS}              # your initial TA credentials
-      - ELASTIC_PASSWORD={TAESPASS}         # set password for Elasticsearch
+      - ELASTIC_PASSWORD=${TAESPASS}         # set password for Elasticsearch
       - TZ=${TATZ}                 # set your time zone
     depends_on:
       - archivist-es
