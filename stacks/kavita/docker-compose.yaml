@@ -1,0 +1,12 @@
+version: '3'
+services:
+    kavita:
+        image: kizaing/kavita:latest
+        container_name: kavita
+        volumes:
+            - ${KAVITACONF}:/kavita/config
+        ports:
+            - ${KAVITAPORT}:5000
+        restart: unless-stopped
+volumes:
+  kavitaconf:

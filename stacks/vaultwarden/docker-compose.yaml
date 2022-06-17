@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  vaultwarden:
+    restart: always
+    image: "vaultwarden/server:latest"
+    container_name: vaultwarden
+    environment:
+      - TZ=${VWTZ}
+      - WEBSOCKET_ENABLED=${VWWEBSOCKET}
+      - SIGNUPS_ALLOWED=${VWALLOWSIGNUP}
+      - DISABLE_ADMIN_TOKEN=${VWDISABLEADMINTOKEN}
+      - ADMIN_TOKEN=${VWADMINTOKEN}
+      - SHOW_PASSWORD_HINT=${VWPASSWORDHINT}
+      - DISABLE_ICON_DOWNLOAD=${VWDISABLEICONDOWNLOAD}
+      - DOMAIN=${VWDOMAIN}
+      - SMTP_HOST=${VWSMTPHOST}
+      - SMTP_PORT=${VWSMTPPORT}
+      - SMTP_SSL=${VWENABLESSL}
+      - SMTP_FROM=${VWSMTPMAIL}
+      - SMTP_USERNAME=${VWSMTPUSER}
+      - SMTP_PASSWORD=${VWSMTPPASS}
+      - SMTP_AUTH_MECHANISM=${VWSMTPAUTHMECH}
+    ports:
+      - ${VWPORTWEB}:80
+      - ${VWPORTAPI}:3012
+    networks:
+      - bitwarden_net
+    volumes:
+      - ${VWDATADIR}:/data/
+
+networks:
+  bitwarden_net:
