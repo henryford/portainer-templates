@@ -8,12 +8,12 @@ services:
       - TZ=$DUPTIMEZONE
     volumes:
       - $DUPCONFDIR:/config
-      - $DUPBACKUPDIR:/backups
-      - $DUPSOURCE:/source
+      - $DUPBKPDIR:/backups
+      - $DUPSRCDIR:/source
     ports:
       - $DUPPORT:8200
     restart: unless-stopped
 volumes:
-  - dupconf:
-  - dupbkp:
-  - dupsrc:
+    dupconf:
+    dupbkp:
+    dupsrc:

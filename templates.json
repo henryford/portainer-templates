@@ -472,17 +472,17 @@
           "default": "8200"
         },
         {
-          "name": "DUPCONF",
+          "name": "DUPCONFDIR",
           "label": "Config Directory for Duplicati. Defaults to named volume.",
           "default": "dupconf"
         },
         {
-          "name": "DUPBACKUPDIR",
+          "name": "DUPBKPDIR",
           "label": "Backup directory for Duplicati. Defaults to named volume.",
           "default": "dupbkp"
         },
         {
-          "name": "DUPSOURCE",
+          "name": "DUPSRCDIR",
           "label": "Source directory for Duplicati. Defaults to named volume.",
           "default": "dupsrc"
         }
