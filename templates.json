@@ -453,6 +453,40 @@
         "url": "https://github.com/henryford/portainer-templates.git",
         "stackfile": "stacks/watchtower/docker-compose.yaml"
       }
+    },
+    {
+      "type": 3,
+      "title": "Duplicati",
+      "description": "Deploy duplicati - backup mgmt software!",
+      "categories": ["admin","backup"],
+      "platform": "linux",
+      "logo": "https://github.com/linuxserver/docker-templates/raw/master/linuxserver.io/img/duplicati-icon.png",
+      "repository": {
+        "url": "https://github.com/henryford/portainer-templates.git",
+        "stackfile": "stacks/duplicati/docker-compose.yaml"
+      },
+      "env": [
+        {
+          "name": "DUPPORT",
+          "label": "Port on host that should be exposed with duplicati.",
+          "default": "8200"
+        },
+        {
+          "name": "DUPCONF",
+          "label": "Config Directory for Duplicati. Defaults to named volume.",
+          "default": "dupconf"
+        },
+        {
+          "name": "DUPBACKUPDIR",
+          "label": "Backup directory for Duplicati. Defaults to named volume.",
+          "default": "dupbkp"
+        },
+        {
+          "name": "DUPSOURCE",
+          "label": "Source directory for Duplicati. Defaults to named volume.",
+          "default": "dupsrc"
+        }
+      ]
     }
   ]
 }
