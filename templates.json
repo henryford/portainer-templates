@@ -530,7 +530,7 @@
       },
       "env": [
         {
-          "name": "PMPORT",
+          "name": "ORGPORT",
           "label": "Port on host that should be exposed with papermerge.",
           "default": "8000"
         },
