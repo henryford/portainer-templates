@@ -531,7 +531,7 @@
       "env": [
         {
           "name": "ORGPORT",
-          "label": "Port on host that should be exposed with papermerge.",
+          "label": "Port on host that should be exposed with Organizr.",
           "default": "8000"
         },
         {
