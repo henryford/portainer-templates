@@ -516,6 +516,30 @@
           "default": "pmdata"
         }
       ]
+    },
+    {
+      "type": 3,
+      "title": "Organizr",
+      "description": "Deploy Organizr - frontend for all the stuff!",
+      "categories": ["admin"],
+      "platform": "linux",
+      "logo": "https://cloud.githubusercontent.com/assets/16184466/24440636/1e5e2002-140a-11e7-8da1-1cd68745cedd.png",
+      "repository": {
+        "url": "https://github.com/henryford/portainer-templates.git",
+        "stackfile": "stacks/organizr/docker-compose.yaml"
+      },
+      "env": [
+        {
+          "name": "PMPORT",
+          "label": "Port on host that should be exposed with papermerge.",
+          "default": "8000"
+        },
+        {
+          "name": "ORGDATA",
+          "label": "Config/Data Directory for Organizr. Defaults to named volume.",
+          "default": "orgdata"
+        }
+      ]
     }
   ]
 }

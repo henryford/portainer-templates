@@ -1,0 +1,14 @@
+---
+version: "3.0"
+services:
+  organizr:
+    image: ghcr.io/organizr/organizr
+    container_name: organizr
+    environment:
+      - branch:"v2-master"
+    ports:
+      - ${ORGPORT}:80
+    volumes:
+      - ${ORGDATA}:/config
+volumes:
+  orgdata:
