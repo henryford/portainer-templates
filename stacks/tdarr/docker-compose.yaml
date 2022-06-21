@@ -1,0 +1,26 @@
+---
+services:
+  tdarr:
+    container_name: tdarr
+    image: ghcr.io/haveagitgat/tdarr:latest
+    restart: unless-stopped
+    ports:
+      - 8265:8265 # webUI port
+      - 8266:8266 # server port
+      #- 8267:8267 # Internal node port
+      #- 8268:8268 # Example extra node port
+    environment:
+      - TZ=${TDTZ}
+      - serverIP=0.0.0.0
+      - serverPort=8266
+      - webUIPort=8265
+      - internalNode=true
+      - nodeID=IntNode
+    volumes:
+      - /mnt/datapool/tdarr/server:/app/server
+      - /mnt/datapool/tdarr/configs:/app/configs
+      - /mnt/datapool/tdarr/logs:/app/logs
+      - /mnt/naspool1:/mnt/naspool1
+      - /mnt/naspool2:/mnt/naspool2
+      - /mnt/datapool:/mnt/datapool
+      - /mnt/ssd/tdarr_cache:/temp

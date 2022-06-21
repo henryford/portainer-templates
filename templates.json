@@ -487,6 +487,35 @@
           "default": "dupsrc"
         }
       ]
+    },
+    {
+      "type": 3,
+      "title": "Papermerge",
+      "description": "Deploy Papermerge - document mgmt software!",
+      "categories": ["doc"],
+      "platform": "linux",
+      "logo": "https://www.papermerge.com/assets/img/papermerge-logo.svg",
+      "repository": {
+        "url": "https://github.com/henryford/portainer-templates.git",
+        "stackfile": "stacks/papermerge/docker-compose.yaml"
+      },
+      "env": [
+        {
+          "name": "PMPORT",
+          "label": "Port on host that should be exposed with papermerge.",
+          "default": "8000"
+        },
+        {
+          "name": "PMCONF",
+          "label": "Config Directory for Papermerge. Defaults to named volume.",
+          "default": "pmconf"
+        },
+        {
+          "name": "PMDATA",
+          "label": "Data directory for Papermerge. Defaults to named volume.",
+          "default": "pmdata"
+        }
+      ]
     }
   ]
 }

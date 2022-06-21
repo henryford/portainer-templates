@@ -1,0 +1,17 @@
+---
+version: "2.1"
+services:
+  papermerge:
+    image: lscr.io/linuxserver/papermerge:latest
+    container_name: papermerge
+    environment:
+      - TZ=America/New_York
+    volumes:
+      - ${PMCONF}:/config
+      - ${PMDATA}:/data
+    ports:
+      - ${PMPORT}:8000
+    restart: unless-stopped
+volumes:
+  pmconf:
+  pmdata:
