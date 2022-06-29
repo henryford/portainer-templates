@@ -540,6 +540,60 @@
           "default": "orgdata"
         }
       ]
+    },
+    {
+      "type": 3,
+      "title": "deCONZ",
+      "description": "Deploy deCONZ - manage zigbee devices on the conbeeII stick",
+      "categories": ["auto","ha"],
+      "platform": "linux",
+      "logo": "https://forum.phoscon.de/uploads/default/original/1X/c61b1a04d0bb3c2fb4cc9ca1b1194f8f50ce0a84.png",
+      "repository": {
+        "url": "https://github.com/henryford/portainer-templates.git",
+        "stackfile": "stacks/deconz/docker-compose.yaml"
+      },
+      "env": [
+        {
+          "name": "DECTZ",
+          "label": "Set the timezone for the deconz service to use.",
+          "default": "Europe/Berlin"
+        },
+        {
+          "name": "DECDEV",
+          "label": "Path to the USB ConbeeII stick attached to the host.",
+          "default": "/dev/ttyUSB0"
+        },
+        {
+          "name": "DECWPORT",
+          "label": "Port on the host exposed with the deCONZ webservice. Format: [INTERFACEADDRESS:]PORT",
+          "default": 9922
+        },
+        {
+          "name": "DECVNZPORT",
+          "label": "Set for the VNC session to be exposed to the host. Format: [INTERFACEADDRESS:]PORT",
+          "default": "5000"
+        },
+        {
+          "name": "VNCPASS",
+          "label": "Set the password for the vnc connection to use. 8 characters max.",
+          "default": "changeme"
+        },
+        {
+          "name": "DECDATA",
+          "label": "Data directory for deconz data. Defaults to named volume.",
+          "default": "decdata"
+        },
+        {
+          "name": "DECUID",
+          "label": "User ID to use for the deconz service. MUST belong to the dialup group (directly or inherited).",
+          "default": "1000"
+        },
+        {
+          "name": "DECGID",
+          "label": "Group ID to use for the deconz service.",
+          "default": "1000"
+        }
+      ]
     }
   ]
 }
