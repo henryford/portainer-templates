@@ -27,9 +27,5 @@ services:
       - DECONZ_UID=${DECUID}
       - DECONZ_GID=${DECGID}
       - DECONZ_START_VERBOSE=0
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "50m"
 volumes:
   decdata:
