@@ -585,7 +585,7 @@
         },
         {
           "name": "DECUID",
-          "label": "User ID to use for the deconz service. MUST belong to the dialup group (directly or inherited).",
+          "label": "User ID to use for the deconz service. MUST belong to the dialout group (directly or inherited).",
           "default": "1000"
         },
         {
