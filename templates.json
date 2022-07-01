@@ -571,7 +571,7 @@
         {
           "name": "DECVNZPORT",
           "label": "Set for the VNC session to be exposed to the host. Format: [INTERFACEADDRESS:]PORT",
-          "default": "5000"
+          "default": 5000
         },
         {
           "name": "VNCPASS",
@@ -586,12 +586,12 @@
         {
           "name": "DECUID",
           "label": "User ID to use for the deconz service. MUST belong to the dialup group (directly or inherited).",
-          "default": "1000"
+          "default": 1000
         },
         {
           "name": "DECGID",
           "label": "Group ID to use for the deconz service.",
-          "default": "1000"
+          "default": 1000
         }
       ]
     }
