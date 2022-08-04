@@ -402,7 +402,7 @@
     {
       "type": 3,
       "title": "homeassistant",
-      "description": "Deploy homeassistant!",
+      "description": "HomeAssistant allows to control your smart home! Lots and lots of integrations allow control over almost everything",
       "categories": ["auto","ha"],
       "platform": "linux",
       "logo": "https://icon-icons.com/downloadimage.php?id=130543&root=2107/PNG/512/&file=file_type_homeassistant_icon_130543.png",
@@ -421,7 +421,7 @@
     {
       "type": 3,
       "title": "kavita",
-      "description": "Deploy kavita - ebook mgmt and reader!",
+      "description": "Kavita is an ebook management solution.",
       "categories": ["media","book"],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/Kareadita/Kavita/develop/Logo/kavita.svg",
@@ -445,7 +445,7 @@
     {
       "type": 3,
       "title": "WatchTower",
-      "description": "Deploy WatchTower to automate docker container updates.",
+      "description": "WatchTower automates the update of docker images.",
       "categories": ["aut","admin","docker"],
       "platform": "linux",
       "logo": "https://github.com/containrrr/watchtower/raw/main/gopher-watchtower.png",
@@ -457,7 +457,7 @@
     {
       "type": 3,
       "title": "Duplicati",
-      "description": "Deploy duplicati - backup mgmt software!",
+      "description": "Duplicati is a backup management solution.",
       "categories": ["admin","backup"],
       "platform": "linux",
       "logo": "https://github.com/linuxserver/docker-templates/raw/master/linuxserver.io/img/duplicati-icon.png",
@@ -491,7 +491,7 @@
     {
       "type": 3,
       "title": "Papermerge",
-      "description": "Deploy Papermerge - document mgmt software!",
+      "description": "PaperMerge is a document mgmt software that allows storing of various types of documents.",
       "categories": ["doc"],
       "platform": "linux",
       "logo": "https://www.papermerge.com/assets/img/papermerge-logo.svg",
@@ -520,7 +520,7 @@
     {
       "type": 3,
       "title": "Organizr",
-      "description": "Deploy Organizr - frontend for all the stuff!",
+      "description": "Organizr provides a neat (i-frame based) frontend for everything!",
       "categories": ["admin"],
       "platform": "linux",
       "logo": "https://cloud.githubusercontent.com/assets/16184466/24440636/1e5e2002-140a-11e7-8da1-1cd68745cedd.png",
@@ -544,7 +544,7 @@
     {
       "type": 3,
       "title": "deCONZ",
-      "description": "Deploy deCONZ - manage zigbee devices on the conbeeII stick",
+      "description": "deCONZ Software is used to control zigbee devices using the Conbee II stick.",
       "categories": ["auto","ha"],
       "platform": "linux",
       "logo": "https://forum.phoscon.de/uploads/default/original/1X/c61b1a04d0bb3c2fb4cc9ca1b1194f8f50ce0a84.png",
@@ -592,6 +592,30 @@
           "name": "DECGID",
           "label": "Group ID to use for the deconz service.",
           "default": "1000"
+        }
+      ]
+    },
+    {
+      "type": 3,
+      "title": "LANCache",
+      "description": "LANCache is a local caching server for various CDNs (mostly useful for LAN). This stack provide the monolithic container.",
+      "categories": ["game","lan"],
+      "platform": "linux",
+      "logo": "https://avatars.githubusercontent.com/u/16938914?s=200&v=4",
+      "repository": {
+        "url": "https://github.com/henryford/portainer-templates.git",
+        "stackfile": "stacks/lancache/docker-compose.yaml"
+      },
+      "env": [
+        {
+          "name": "LCIP",
+          "label": "IP LANCache should be serving on. This is mandatory!",
+          "default": "10.0.39.0"
+        },
+        {
+          "name": "LCDATA",
+          "label": "Storage folder for the LANCache data and logs. This is mandatory due to persistence!",
+          "default": "/cache"
         }
       ]
     }

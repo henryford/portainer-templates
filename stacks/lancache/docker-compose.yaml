@@ -1,0 +1,12 @@
+version: '3'
+services:
+    lancache:
+        image: lancachenet/monolithic:latest
+        container_name: lancache-monolith
+        volumes:
+            - ${LCDATA}/cache:/data/cache            
+            - ${LCDATA}/logs:/data/logs
+        ports:
+            - ${LCIP}:80:80
+            - ${LCIP}:443:443
+        restart: unless-stopped
