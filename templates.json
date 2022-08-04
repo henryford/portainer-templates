@@ -438,7 +438,7 @@
         {
           "name": "KAVPORT",
           "label": "Port Kavita is exposed on on the host.",
-          "default": 5000
+          "default": "5000"
         }
       ]
     },
@@ -566,7 +566,7 @@
         {
           "name": "DECWPORT",
           "label": "Port on the host exposed with the deCONZ webservice. Format: [INTERFACEADDRESS:]PORT",
-          "default": 9922
+          "default": "9922"
         },
         {
           "name": "DECVNZPORT",
@@ -585,7 +585,7 @@
         },
         {
           "name": "DECUID",
-          "label": "User ID to use for the deconz service. MUST belong to the dialup group (directly or inherited).",
+          "label": "User ID to use for the deconz service. MUST belong to the dialout group (directly or inherited).",
           "default": "1000"
         },
         {
