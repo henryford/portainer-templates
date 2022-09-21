@@ -1,0 +1,13 @@
+services:
+  ytdl-sub:
+    image: ghcr.io/jmbannon/ytdl-sub:latest
+    container_name: ytdl-sub
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Berlin
+    volumes:
+      - ${YTDLCONF}:/config
+      - ${YTDLTV}:/tv_shows # optional
+      - ${YTDLMOV}:/movies # optional
+      - ${YTDLMV}:/music_videos # optional
+      - ${YTDLM}:/music # optional

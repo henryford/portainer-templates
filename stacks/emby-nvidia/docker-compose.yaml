@@ -1,0 +1,21 @@
+--
+version: "3"
+services:
+  emby:
+    image: emby/embyserver:latest
+    container_name: emby-server
+    runtime: nvidia
+    volumes:
+      - ${EYCONF}:/config
+      - ${TVDIR1}:/m/tv1
+      - ${TVDIR2}:/m/tv2
+      - ${TVDIR3}:/m/tv3
+      - ${MOVIEDIR1}:/m/movie1
+      - ${MOVIEDIR2}:/m/movie2
+      - ${MOVIEDIR3}:/m/movie3
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility,video
+    ports:
+      - ${EYIP}:${EYPORT}:8096
+      - 7359:7359
